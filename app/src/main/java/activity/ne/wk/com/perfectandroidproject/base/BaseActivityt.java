@@ -20,7 +20,7 @@ import java.util.Random;
  * @author : wk
  * @github : https://github.com/wangfree86/PerfectAndroidProject
  * @date : 2019/12/9
- *
+ *tij
  * @desc : activity基类
  */
 
