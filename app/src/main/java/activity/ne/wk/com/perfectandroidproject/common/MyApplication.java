@@ -9,9 +9,6 @@ import com.hjq.toast.ToastInterceptor;
 import com.hjq.toast.ToastUtils;
 import com.squareup.leakcanary.LeakCanary;
 
-import activity.ne.wk.com.perfectandroidproject.MainActivity;
-import cat.ereza.customactivityoncrash.config.CaocConfig;
-
 /**
  * @author : wk
  * @github : https://github.com/wangfree86/PerfectAndroidProject
@@ -23,6 +20,15 @@ public class MyApplication extends Application{
     public void onCreate() {
         super.onCreate();
         initSDK(this);
+//        MultiDex.install(this);
+//        很多第三方开源库都说在Application中进行初始化，十几个开源库都放在Application中，肯定对冷启动会有影响，所以可以考虑按需初始化，例如Glide，可以放在自己封装的图片加载类中，调用到再初始化，其它库也是同理，让Application变得更轻。
+
+//假设初始化耗时很久
+        try {
+            Thread.sleep(6000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

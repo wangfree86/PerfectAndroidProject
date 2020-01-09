@@ -1,4 +1,46 @@
 apply plugin: 'com.android.application'
+apply plugin: TestPlugin
+apply plugin: TestPlugin2
+
+// 普通的自定义 Task
+task testBoth {
+//    doFirst {
+//        println '333This is executed first during the execution phase.' // doFirst 中的代码在执行阶段执行
+//    }
+//    doLast {
+//        println '444This is executed last during the execution phase.' // doLast 中的代码在执行阶段执行
+//    }
+    println '555This is executed during the configuration phase as well.' // 非 doFirst 或者 doLast 中的代码，在配置阶段执行
+}
+
+//// 继承自 Copy 的 TasK
+//task copyPublicApk(type: Copy) {
+//    doFirst {
+//        println("88-----------> copy the new pubic apk begin")
+//    }
+//    // from, into, rename 都继承自 Copy，所以即使直接写也是在执行阶段执行
+//    from 'build/outputs/apk/app-debug.apk'
+//    into file('src/privateApp/assets')
+//    rename { String fileName ->
+//        fileName = "Public.apk"
+//    }
+//    println '544455This is executed during the configuration phase as well.' //
+//    doLast {
+//        println("888888888-----------> copy the new pubic apk end")
+//    }
+//}
+//task customTask() {
+//    doLast {
+//        println 'hello, this is a custom task'
+//    }
+//    println 'hello, this is a custom task'
+//}
+//afterEvaluate {
+//    def aTask = tasks.getByName('assembleDebug')
+//    println "aTask name is ${aTask.name}"
+//    aTask.dependsOn(customTask)
+//}
+
 
 android {
     compileSdkVersion 26
