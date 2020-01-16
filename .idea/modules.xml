@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PerfectAndroidProject.iml" filepath="$PROJECT_DIR$/PerfectAndroidProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/buildSrc/buildSrc.iml" filepath="$PROJECT_DIR$/buildSrc/buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/code.iml" filepath="$PROJECT_DIR$/code/code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nPerfectAndroidProject.iml" filepath="$PROJECT_DIR$/nPerfectAndroidProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/nPerfectAndroidProject-app.iml" filepath="$PROJECT_DIR$/app/nPerfectAndroidProject-app.iml" />
     </modules>
   </component>
 </project>

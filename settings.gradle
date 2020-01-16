@@ -1,1 +1,2 @@
-include ':app'
+include ':app',':buildSrc', ':code'
+println '111111111111This is executed during the initialization phase.' // settings.gradle 中的代码在初始化阶段执行
